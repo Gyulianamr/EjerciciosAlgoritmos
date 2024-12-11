@@ -30,38 +30,36 @@ def sort_queue(q):
     n = q.size()
 
     for i in range(n):
-        # Encuentra el elemento más pequeño en el rango restante
+       
         min_index = -1
         min_value = float('inf')
 
         for j in range(n):
             value = q.dequeue()
 
-            # Actualiza el índice del elemento mínimo
             if value < min_value and j < n - i:
                 min_value = value
                 min_index = j
 
             q.enqueue(value)
 
-        # Vuelve a insertar la cola excluyendo el elemento mínimo
+       
         for j in range(n):
             value = q.dequeue()
 
             if j != min_index:
                 q.enqueue(value)
 
-        # Inserta el elemento mínimo al final
+        
         q.enqueue(min_value)
 
-# Ejemplo de uso
-if __name__ == "__main__":
-    q = Queue()
-    elements = [3, 1, 4, 1, 5, 9, 2]
 
-    for element in elements:
-        q.enqueue(element)
+q = Queue()
+elements = [3, 1, 4, 1, 5, 9, 2]
 
-    print("Cola original:", q.items)
-    sort_queue(q)
-    print("Cola ordenada:", q.items)
+for element in elements:
+    q.enqueue(element)
+
+print("Cola original:", q.items)
+sort_queue(q)
+print("Cola ordenada:", q.items)
