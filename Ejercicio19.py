@@ -52,11 +52,11 @@ def fusionar_listas(lista1, lista2):
 
     return nueva_lista
 
-# Ejemplo de uso:
+
 lista1 = ListaEnlazada()
 lista2 = ListaEnlazada()
 
-# Agregar elementos a las listas enlazadas
+
 for valor in [1, 3, 5]:
     lista1.agregar(valor)
 for valor in [2, 4, 6]:
@@ -67,7 +67,7 @@ lista1.imprimir()
 print("Lista 2:")
 lista2.imprimir()
 
-# Fusionar las listas
+
 lista_fusionada = fusionar_listas(lista1, lista2)
 print("Lista fusionada:")
 lista_fusionada.imprimir()
