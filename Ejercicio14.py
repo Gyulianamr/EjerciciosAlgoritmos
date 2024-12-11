@@ -56,7 +56,7 @@ class CircularQueue:
         pares = []
         impares = []
 
-        # Separar pares e impares
+     
         indice = self.frente
         while True:
             if self.cola[indice] % 2 == 0:
@@ -68,10 +68,10 @@ class CircularQueue:
                 break
             indice = (indice + 1) % self.tamaño
 
-        # Combinar pares e impares
+    
         nueva_cola = pares + impares
 
-        # Actualizar la cola con la nueva organización
+        
         self.cola = nueva_cola + [None] * (self.tamaño - len(nueva_cola))
         self.frente = 0
         self.final = len(nueva_cola) - 1
@@ -79,7 +79,7 @@ class CircularQueue:
         return nueva_cola
 
 
-# Ejemplo de uso
+
 cola = CircularQueue(5)
 
 cola.enqueue(10)
